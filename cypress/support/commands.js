@@ -27,6 +27,7 @@
 
 Cypress.Commands.add('loginToTrello',()=>{
     cy.intercept("https://trello.com/1/resources/templates/categories").as("categories")
+    cy.log("@categories")
     cy.visit("/login");
     // cy.wait(2500)
     cy.get("#username").type("moath.alzoughah@gmail.com");
