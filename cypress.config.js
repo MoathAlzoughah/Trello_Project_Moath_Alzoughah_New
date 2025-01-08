@@ -5,8 +5,11 @@ module.exports = defineConfig({
   specPattern: "cypress/e2e/**/*.{feature,cy.js}",
   baseUrl:"http://trello.com/",
   chromeWebSecurity:false,
+  screenshotOnRunFailure:true,
+  // trashAssetsBeforeRuns 
   setupNodeEvents(on, config) {
     on("file:preprocessor", cucumber());
   },
   },
 });
+

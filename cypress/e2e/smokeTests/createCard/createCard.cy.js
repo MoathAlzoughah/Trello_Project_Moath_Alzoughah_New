@@ -14,7 +14,7 @@ const loginToTrello = loginToTrello
 const createCardAction = new createCardActions();
 
 const createCardAssertionsss = new createCardAssertions();
-                                
+
 
 
 let  boardUrl , BoradId;
@@ -86,6 +86,3 @@ cy.wait(5000)
 
 
 })
-
-
-
