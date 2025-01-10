@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 class MoveTemplateToAnyListActions{
 
     openBoard(boardUrl){
@@ -31,7 +33,7 @@ class MoveTemplateToAnyListActions{
     NewTemplateCardSubmitButton(){
 
         cy.findByTestId("new-template-card-submit-button").click()
-        cy.wait(7000)
+        cy.wait(8700)
         return this;
     
     }
@@ -39,7 +41,7 @@ class MoveTemplateToAnyListActions{
 
     
     ClickONDownIcone(){
-        cy.get(".hpM7BapwowXTcC").click()
+        cy.contains("in list").click("right")
         cy.wait(1000)
         return this;
     }

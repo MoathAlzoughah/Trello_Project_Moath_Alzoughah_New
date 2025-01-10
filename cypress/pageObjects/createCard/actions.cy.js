@@ -1,11 +1,12 @@
 class createCardActions {
     openBoard(boardUrl){
         cy.visit(boardUrl)
-        cy.wait(6000)
+        cy.wait(8000)
         return this;
     }
 
     clickOnAddACardButton(){
+        cy.wait(500)
         cy.findByTestId("list-add-card-button").first().click()
         cy.wait(3000)
         return this;
@@ -14,7 +15,7 @@ class createCardActions {
 
     typeInCardTitleInputField(cardName){
         cy.findByTestId("list-card-composer-textarea").type(cardName)
-        cy.wait(2000)
+        cy.wait(2500)
 
         return this;
     }
